@@ -22,4 +22,4 @@ jobs:
         DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
         DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
       run: |
-        sh portafolio/start.sh; echo $DEPLOY_USER
+        sh portafolio/start.sh; echo ($DEPLOY_USER hola);
