@@ -5,5 +5,5 @@ este es un repositorio con react js
 ## Iniciar el proyecto 
 en una terminal ejecute \
 `cd portafolio`\
-`yarn build` \
-`yarn start`
+`npm install` \
+`npm start`
