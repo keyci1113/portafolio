@@ -21,7 +21,7 @@ jobs:
         DOCKER_USER: ${{ secrets.DOCKER_USER}}
         DOCKER_PASS: ${{secrets.DOCKER_PASS}}
       run: |
-        sh portafolio/deploy.sh;
+        sh portafolio/build.sh;
     - name: Deploy
       env: # Or as an environment variable
         key: ${{ secrets.DEPLOY_KEY }}
