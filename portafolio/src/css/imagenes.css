@@ -1,0 +1,10 @@
+﻿.pull-left {
+    float: left !important;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.img-circle {
+    border-radius: 50%;
+}
