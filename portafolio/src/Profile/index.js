@@ -6,7 +6,7 @@ function Profile() {
 
   return (
     <div>
-      <p>funciono!!!</p>
+      <p>prueba #2</p>
       <p>clicks {count} times</p>
       <button onClick={() => setCount(count + 1)}>
         click me
