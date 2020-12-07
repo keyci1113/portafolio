@@ -1,0 +1,62 @@
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+
+    -webkit-animation: bganimate 26s ease infinite;
+    animation: bganimate 26s ease infinite;
+}
+
+@-webkit-keyframes bganimate {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+@keyframes bganimate {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+.Alex {
+    --bg-color: #ffd861;
+    --bg-color-light: #ffeeba;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(45, 84, 255, 0.48);
+  }
+  .Keyci {
+    --bg-color: #ffd861;
+    --bg-color-light: #ffeeba;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(244, 64, 250, 0.48);
+  }
+  
+  
+.card-blur {
+    position: absolute;
+    height: 100%;
+    width: calc(100% + 1px);
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+}
+
+.card:hover .card-blur {
+    opacity: 0.6;
+}
+
+.hovercard{
+    box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+    
+    transition: all 0.3s ease-out;
+}
+
+.hovercard:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(27, 37, 189, 0.11),
+      0 24px 46px var( --box-shadow-color);
+  }
+
+  .hovercard:active {
+    transform: scale(1) translateZ(0);
+    box-shadow: 0 15px 24px rgba(228, 225, 57, 0.11),
+      0 15px 24px var(--box-shadow-color);
+  }
