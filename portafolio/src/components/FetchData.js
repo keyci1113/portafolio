@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Layout from './Layout'
+import Layout from './Layout';
+import { Spinner } from 'reactstrap';
 
 export class FetchData extends Component {
   static displayName = FetchData.name;
@@ -15,32 +16,34 @@ export class FetchData extends Component {
 
   static renderForecastsTable(forecasts) {
     return (
-      <table className='table table-striped' aria-labelledby="tabelLabel">
-        <thead>
-          <tr>
-            <th>Fecha y hora</th>
-            <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Resumen</th>
-          </tr>
-        </thead>
-        <tbody>
-          {forecasts.map(forecast =>
-            <tr key={forecast.date}>
-              <td>{forecast.date}</td>
-              <td>{forecast.temperatureC}</td>
-              <td>{forecast.temperatureF}</td>
-              <td>{forecast.summary}</td>
+      <div>
+        <table className='table table-striped' aria-labelledby="tabelLabel">
+          <thead>
+            <tr>
+              <th>Fecha y hora</th>
+              <th>Temp. (C)</th>
+              <th>Temp. (F)</th>
+              <th>Resumen</th>
             </tr>
-          )}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {forecasts.map(forecast =>
+              <tr key={forecast.date}>
+                <td>{forecast.date}</td>
+                <td>{forecast.temperatureC}</td>
+                <td>{forecast.temperatureF}</td>
+                <td>{forecast.summary}</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
     );
   }
 
   render() {
     let contents = this.state.loading
-      ? <p><em>Loading...</em></p>
+      ? <div style={{marginLeft:"50%",marginRight:"50%"}}><Spinner color="primary" /></div>
       : FetchData.renderForecastsTable(this.state.forecasts);
 
     return (
@@ -53,7 +56,7 @@ export class FetchData extends Component {
   }
 
   async populateWeatherData() {
-    const response = await fetch('weatherforecast');
+    const response = await fetch(process.env.REACT_APP_HOST_API+'/weatherforecast');
     const data = await response.json();
     this.setState({ forecasts: data, loading: false });
   }
