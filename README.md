@@ -1,7 +1,7 @@
 # Portafolio
 este es un repositorio con react js
 ## Hosting
-[portafolio](http://ec2-52-91-126-151.compute-1.amazonaws.com:443/)\
+[portafolio](http://ec2-52-91-126-151.compute-1.amazonaws.com/)\
 [Keyci Padilla](http://ec2-52-91-126-151.compute-1.amazonaws.com:443/Keycipadilla)\
 [Alex Diaz](http://ec2-52-91-126-151.compute-1.amazonaws.com:443/alexdiaz)\
 ## Iniciar el proyecto 
